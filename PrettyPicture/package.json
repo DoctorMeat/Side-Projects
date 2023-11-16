@@ -1,0 +1,28 @@
+{
+  "name": "prettypicture",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "build": {
+    "appId": "PrettyPicture",
+    "productName": "PrettyPicture",
+    "directories": {
+      "output": "dist"
+    },
+    "mac": {
+      "category": "spooky"
+    },
+    "win": {
+      "target": "portable"
+    },
+  "author": "DaddyMeat",
+  "license": "ISC",
+  "devDependencies": {
+    "electron-builder": "^24.6.4"
+    }
+  }
+}

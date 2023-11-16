@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="app.js"></script>
+    <script>
+        // Fetch a random image from Unsplash API
+        fetch('https://source.unsplash.com/random')
+            .then(response => {
+                if (response.ok) {
+                    document.getElementById('mainContainer').innerHTML = `<img src="${response.url}" alt="Random Image">`;
+                } else {
+                    console.error('Error fetching random image from Unsplash');
+                }
+            })
+            .catch(error => {
+                console.error('Error fetching random image:', error);
+            });
+    
+        // Display the hidden button after a delay (just for demonstration)
+        setTimeout(function() {
+            document.getElementById('youFoundMe').style.display = 'block';
+        }, 3000);
+    </script>
+    <title>Random Picture</title>
+</head>
+<body>
+    <button id="youFoundMe" style="display: none;"></button>
+    <div id="mainContainer">
+ 
+        
+    </div>
+</body>
+</html>
